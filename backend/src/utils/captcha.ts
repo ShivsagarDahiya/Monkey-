@@ -7,7 +7,7 @@ type CaptchaData = {
   "error-codes"?: string[];
 };
 
-const recaptchaSecret = process.env["RECAPTCHA_SECRET"] ?? null;
+const recaptchaSecret = process.env["RECAPTCHA_SITE_KEY"] ?? null;
 
 export async function verify(captcha: string): Promise<boolean> {
   if (isDevEnvironment()) {
